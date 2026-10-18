@@ -62,9 +62,9 @@ Save images in an `assets/` folder in your project.
 ## Step 5: Connect Your Custom Domain (Optional)
 
 1. In the repo: Settings > Pages > Custom domain > enter `yourdomain.com` > Save
-2. At your domain registrar's DNS settings, add:
-   - An `A` record pointing to GitHub's IPs, or
-   - A `CNAME` record: host `www`, value `yourusername.github.io`
+2. At your domain registrar's DNS settings (if you bought your own domain name, log into wherever you bought it, look for "DNS settings" or "DNS records" or "Manage DNS"; you'll see a list with spots for A records and CNAME records), add:
+   - An `A` record (this points your domain straight at a server IP address) pointing to GitHub's IPs, or
+   - A `CNAME` record (this is like a nickname that points one name at another name): host `www`, value `yourusername.github.io`
 3. Wait for DNS to propagate (minutes to hours)
 4. GitHub auto-provisions your free HTTPS certificate
 
