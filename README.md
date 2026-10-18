@@ -4,7 +4,7 @@ A step-by-step guide to building, hosting, and running a real website for $0/mon
 
 > **Shortcut:** You don't have to read this whole thing. Just tell your Muse bot: "Read the entire README at github.com/linydee88/build-a-free-website-with-muse and do what it says." Then work with Muse, giving it whatever prompts and changes you want, and enjoy. The guide below is here if you want to understand each step yourself.
 
-This guide was written from a real 4-day build: a tarot reader's full business website with product pages, Stripe and PayPal checkout, custom domain, and SEO, all built by chatting with Muse.
+This guide was written from a real 4-day build of a small business website with product pages, Stripe and PayPal checkout, custom domain, and SEO, all built by chatting with Muse.
 
 ---
 
@@ -184,12 +184,6 @@ Every extra click between "I want this" and "I bought this" loses people. Count 
 - **Your repo is the source of truth.** Every change goes through git. If something breaks, you can always roll back.
 - **Binary files need care.** Some push tools skip images; verify image URLs return 200 after pushing.
 - **Fiddling is the job.** Expect to iterate. Each round makes it better, and it costs nothing but time.
-
----
-
-## Real Example
-
-This guide comes from [linydee.com](https://linydee.com), a tarot reader's site built in 4 days with Muse: 5 product pages with Stripe + PayPal checkout, custom subdomains (`order.linydee.com`, `library.linydee.com`), SEO, and a full About/FAQ/Books/Library section. Monthly cost went from ~$70 (Wix + Stan Store) to $0.
 
 ---
 
