@@ -36,7 +36,7 @@ Muse will scaffold the HTML structure. Iterate on it: "move the About hero image
 Work page by page. Useful prompts:
 
 - "Make me a mobile menu with these links: Home, About, Products, FAQ, Contact"
-- "Make a hero banner for the homepage, dark green and gold, with my tagline"
+- "Make a hero banner (your hero is the main banner at the top of your page, the first thing visitors see, so make it pretty) for the homepage, dark green and gold, with my tagline"
 - "Generate a hero banner image, wide and short, with [describe what you want]"
 - "Make product cards with a thumbnail on the left, title and description on the right, and a price badge"
 - "Add two buttons under each product: Pay with Card and Pay with PayPal"
@@ -48,7 +48,7 @@ Work page by page. Useful prompts:
 Muse can generate images, or you can bring your own:
 
 - "Generate a square product thumbnail for [product name], dark green and gold tarot theme"
-- "Generate a wide hero banner, 5:1 ratio, with [description]"
+- "Generate a wide hero banner (the main image at the top of your page), 5:1 ratio, with [description]"
 
 Save images in an `assets/` folder in your project.
 
