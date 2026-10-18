@@ -128,6 +128,39 @@ Once your site handles what Wix/Squarespace/Stan Store did for you, cancel them:
 
 ---
 
+## Fine Details That Make It Feel Professional
+
+These are the small things that separate a "homemade" site from one that feels polished:
+
+### Hash Routing with Working Back Button
+Use hash routes (`#/about`, `#/products`) and a JavaScript router. Key detail: when a visitor clicks a product, then hits the browser back button, they should land back on the listing page **at the same scroll position** they left. Save `window.scrollY` before navigating to a detail view, restore it on back.
+
+### Detail Pages
+Each product gets its own view (`#/product/widget`) with:
+- A circular back button (top-left) that returns to the listing
+- Full description, terms, and order buttons top AND bottom (so buyers never have to scroll up to buy)
+- A currency notice if you sell internationally ("Prices are in USD...")
+
+### Buttons That Convert
+- **Order buttons first.** On mobile, put your buy button before your contact button. People scroll and buy; contact is for later.
+- **Show payment logos.** Small Visa, Mastercard, Apple Pay, Google Pay badges on your pay buttons. Seeing a familiar logo is a mental shortcut to "this is easy, I'll do it."
+- **Two payment options, side by side:** "Pay with Card" (Stripe) and "Pay with PayPal." Let the buyer choose.
+
+### Mobile Menu That Doesn't Suck
+- Keep it simple: 2-column grid or a clean vertical list
+- Match your site colors (don't let it default to white/black)
+- Include every page, including new ones you add later
+
+### Centering and Spacing
+- Center your hero text; it reads as more intentional than left-aligned on mobile
+- Give buttons breathing room (min 10px gaps); cramped buttons feel cheap
+- Price badges: high contrast (white badge, dark text, or vice versa) so the price pops
+
+### The "One More Click" Rule
+Every extra click between "I want this" and "I bought this" loses people. Count the clicks from your social bio to completed purchase. If it's more than 3, shorten it with subdomain redirects (Step 6).
+
+---
+
 ## Lessons Learned
 
 - **Verify before claiming.** When something looks broken, check the live site with a fresh fetch before changing code. Browser cache causes most "it's not working" false alarms; hard-refresh (Ctrl+F5) first.
