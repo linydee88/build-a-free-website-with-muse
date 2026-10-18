@@ -2,6 +2,8 @@
 
 A step-by-step guide to building, hosting, and running a real website for $0/month using Muse (your AI assistant) and GitHub Pages. No Wix, no Squarespace, no Stan Store, no monthly fees.
 
+> **Shortcut:** You don't have to read this whole thing. Just tell your Muse bot: "Read the entire README at github.com/linydee88/build-a-free-website-with-muse and do what it says." Then work with Muse, giving it whatever prompts and changes you want, and enjoy. The guide below is here if you want to understand each step yourself.
+
 This guide was written from a real 4-day build: a tarot reader's full business website with product pages, Stripe and PayPal checkout, custom domain, and SEO, all built by chatting with Muse.
 
 ---
@@ -12,6 +14,20 @@ This guide was written from a real 4-day build: a tarot reader's full business w
 - Muse (the AI assistant; free plan works)
 - A domain name (optional; ~$12/year from any registrar, or use a free `yourname.github.io` address)
 - Zero coding experience (Muse writes the code; you direct the design)
+
+### Giving Muse Access to Your GitHub (Personal Access Token)
+
+For Muse to push your website to GitHub for you, it needs a token. Here's how:
+
+1. Go to **github.com/settings/tokens** (log in first)
+2. Click **Generate new token** > **Generate new token (classic)**
+3. Give it a name like "Muse website builder"
+4. Set an expiration (30 days is fine; you can delete it sooner)
+5. Check the **`repo`** scope (this lets Muse create repos and push code)
+6. Click **Generate token** and **copy it immediately** (you won't see it again)
+7. Give the token to Muse through its secure credential flow, **not by pasting it in chat** (chat text is visible, so a pasted token should be treated as compromised and deleted)
+
+When you're done building, go back to github.com/settings/tokens and **delete the token**. Muse doesn't need it anymore, and a deleted token can't be misused.
 
 ## What You Get
 
