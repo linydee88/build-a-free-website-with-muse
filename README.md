@@ -41,7 +41,7 @@ Work page by page. Useful prompts:
 - "Make product cards with a thumbnail on the left, title and description on the right, and a price badge"
 - "Add two buttons under each product: Pay with Card and Pay with PayPal"
 
-**Tip:** Keep mobile and desktop designs separate from the start. Use separate images and CSS per breakpoint so editing one never breaks the other.
+**Tip:** Tell Muse to make separate HTML code for the desktop version of your site and the mobile version of your site. Use separate images, separate elements, and separate CSS per breakpoint, shown and hidden with media queries. That way editing one never breaks the other. This is the single biggest thing that will save you headaches.
 
 ## Step 3: Generate Your Images
 
