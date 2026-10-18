@@ -23,7 +23,7 @@ For Muse to push your website to GitHub for you, it needs a token. Here's how:
 2. Click **Generate new token** > **Generate new token (classic)**
 3. Give it a name like "Muse website builder"
 4. Set an expiration (30 days is fine; you can delete it sooner)
-5. Check the **`repo`** scope (this lets Muse create repos and push code)
+5. Click the checkbox that says **repo** (this lets Muse create repos and push code for you)
 6. Click **Generate token** and **copy it immediately** (you won't see it again)
 7. Give the token to Muse through its secure credential flow, **not by pasting it in chat** (chat text is visible, so a pasted token should be treated as compromised and deleted)
 
