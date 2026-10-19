@@ -142,6 +142,76 @@ Once your site handles what Wix/Squarespace/Stan Store did for you, cancel them:
 - Keep your domain registration wherever it is (you only need DNS access)
 - Savings: Wix (~$20-40/mo) + Stan Store (~$29/mo) = hundreds per year back in your pocket
 
+## Step 10: Make Your Site Accessible
+
+Accessibility means people with disabilities can actually use your site: blind visitors using screen readers (software that reads the page aloud), people who navigate by keyboard only, people who need high contrast. In Ontario this falls under the AODA (a provincial accessibility law); the technical standard it points to is called WCAG (a set of web accessibility guidelines), level AA. Even where the law doesn't strictly apply to a tiny business, accessible sites get more customers, and it's the right thing to do. Do this before you call the site finished:
+
+### Alt text on every image
+A screen reader reads the `alt` text aloud so a blind visitor knows what the image shows. Decorative images (background flourishes, dividers) get empty alt (`alt=""`) so they're skipped.
+
+```html
+<!-- Meaningful: describe it -->
+<img src="tarot-cards.jpg" alt="Three tarot cards: the Moon, the Star, and the Sun" />
+
+<!-- Decorative: leave it empty -->
+<img src="gold-divider.png" alt="" />
+```
+
+### Skip link
+Keyboard users tab through your page. Without a skip link they have to tab through your entire menu on every page. Add this as the very first thing inside `<body>`, pointing at your `<main>` element:
+
+```html
+<a href="#main-content" class="skip-link">Skip to main content</a>
+...
+<main id="main-content" tabindex="-1">
+```
+
+```css
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 200;
+  background: #0b2e23; color: #f2d995;
+  padding: 12px 20px; font-weight: 700; text-decoration: none;
+}
+.skip-link:focus-visible { left: 0; }
+```
+(It's invisible until someone tabs to it, then it appears. `focus-visible` means "when reached by keyboard.")
+
+### Never remove focus outlines (style them instead)
+Browsers draw an outline around whatever has keyboard focus. Some templates hide it with `outline: none`, which strands keyboard users. Keep it and make it pretty:
+
+```css
+:focus-visible { outline: 3px solid gold; outline-offset: 4px; }
+```
+
+### Color contrast
+Text must stand out from its background. The rule of thumb: normal text needs a contrast ratio of 4.5 to 1 or better. Check yours with WebAIM's free contrast checker (search "webaim contrast checker"). Light text on busy photo backgrounds is the usual failure; a dark blurred band behind the text fixes it.
+
+### Headings in order
+Use `h1`, then `h2`, then `h3`, never skipping a level. Screen reader users navigate by headings, so they should form a clean outline. One `h1` per page or view.
+
+### Honor reduced motion
+Some visitors get motion sick. This one block turns off your animations for anyone who has "reduce motion" turned on in their device settings:
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+```
+
+### Label your form fields
+Every input needs a `<label>`. Placeholder text alone doesn't count (it disappears when you type, and screen readers often skip it).
+
+```html
+<label for="email">Email address</label>
+<input id="email" type="email" />
+```
+
+### What you DON'T need
+You don't need to add audio that plays on hover. Screen readers already read your page aloud using the alt text, labels, and headings you provide. Your job is giving them the right words, not making sounds.
+
 ---
 
 ## Fine Details That Make It Feel Professional
